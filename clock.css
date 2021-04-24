@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h2{
+    top: 2px;
+    margin: 0rem;
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    font-size: 4rem;
+    color: rgb(0, 255, 200);
+    font-family: 'Courier New';
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, rgb(3, 119, 128), #02f3f3);
+    overflow: hidden;
+    outline: none;
+}
+.container{
+    position: absolute;
+    z-index: 2;
+    height: 25rem;
+    width: 40rem;
+}
+
+.time{
+height: 100%;
+width: 100%;
+border-radius: 30px 600px 300px 600px;
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+font-size: 5rem;
+transition: all .4s ease;
+}
+.container{
+    display: flex;
+}
+.time span{
+text-align: center;
+animation: time 1.3s ease-out infinite;
+}
+#hour{
+    background: #000;
+    border-radius: 40%;
+}
+#minute{
+    background: rgb(230, 219, 219);
+    border-radius: 40%;
+}
+#second{
+    background: rgb(0, 0, 0);
+    border-radius: 40%;
+}
+
+@keyframes time {
+    0%{
+        height: 20px;
+    }
+
+    20%{
+        height: 30px;
+    }
+    40%{
+        height: 40px;
+    }
+    60%{
+        height: 60px;
+    }
+    80%{
+        height: 40px;
+    }
+    100%{
+        height: 20px;
+    }
+}
+.ball1,.ball2,.ball3{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 4;
+    margin: 2rem;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.9);
+    transition: all 2s ease;
+}
+
+
+
+
+
+@media only screen and (min-device-width : 220px) and (max-device-width : 644px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .container{
+        height: 15rem;
+        width: 15rem;
+    }
+    .time span{
+        text-align: center;
+        animation: time 1.3s ease-out infinite;
+        width: 3rem;
+        font-size: 2rem;
+        }        
+        h2{
+            margin: 0rem;
+            text-align: center;
+            font-size: 2rem;
+            color: rgb(0, 255, 200);
+            font-family: 'Courier New';
+        }
+}
